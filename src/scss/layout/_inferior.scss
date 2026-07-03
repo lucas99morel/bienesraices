@@ -1,0 +1,97 @@
+.seccion-inferior{
+    @include tablet{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+    }
+
+    h3{
+        font-weight: $bold;
+    }
+}
+.blog--contenido{
+    padding: 0 1rem;
+    a{
+        color: $negro;
+    }
+    h3{
+        margin: 1rem 0;
+        line-height: 1.5;
+        &::after{
+            content: '';
+            width: 100%;
+            height: .5rem;
+            background-color: $verde;
+            display: block;
+        }
+    }
+    p{
+        span{
+            color: $amarillo;
+        }
+    }
+}
+.blog{
+    background-color: $gris;
+    border: 2px solid #aaaaaa;
+    margin-bottom: 2rem;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.5rem;
+        background-color: $blanco;
+        border: none;
+        margin-bottom: 4rem;
+
+        .blog--contenido{
+            h3{
+                text-align: left;
+                margin-top: 0;
+                &::after{
+                    width: 15rem;
+                }
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.inferior--testimonial{
+    margin-bottom: 3rem;
+}
+.testimonial{
+    background-color: $verde;
+    border-radius: 2rem;
+    padding: 2rem;
+    position: relative;
+
+    blockquote,p{
+        padding-left: 5rem;
+        font-size: 2.5rem;
+        color: $blanco;
+    }
+    blockquote{
+        &::before{
+            content: '';
+            background-image: url(../../../build/img/comilla.svg);
+            background-repeat: no-repeat;
+            display: block;
+            width: 6rem;
+            height: 8rem;
+            position: absolute;
+            left: 4.5rem;
+        }
+    }
+    p{
+        margin-right: 2.5rem;
+        text-align: right;
+    }
+
+}

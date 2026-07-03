@@ -1,0 +1,19 @@
+.anuncio{   
+    h2{
+        font-weight: $bold;
+    } 
+    .card--descripcion{
+        .precio{
+            text-align: left;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+        ul{
+            justify-content: left;
+            padding: 0;
+            li{
+                margin-right: 2rem;
+            }
+        }
+    }
+}

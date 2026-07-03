@@ -1,0 +1,60 @@
+.propiedades{
+    h3{
+        font-weight: $bold;
+    }
+}
+.cards{
+    @include tablet{
+        @include grid(3,2rem);
+    }
+
+    .card{
+        background-color: #f3f3f3;
+        border: 1px solid #aaaaaa;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.card--descripcion{
+    h3{
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: $bold;
+    }
+    .descripcion{
+        padding: 0 1.5rem;
+    }
+    .precio{
+        margin: 0 1.5rem;
+        font-size: 3rem;
+        font-weight: $bold;
+        color: $verde;
+        text-align: center;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 2rem;
+
+        li{
+            display: flex;
+            p{
+                font-weight: $black;
+                padding: 0 0.8rem;
+            }
+        }
+    }
+}
+
+.ver--mas{
+    display: flex;
+    justify-content: right;
+    a{
+        margin-top: 0;
+        margin-right: 0;
+    }
+}

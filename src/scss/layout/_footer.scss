@@ -1,0 +1,32 @@
+.footer{
+    background-color: $grisOscuro;
+    padding: 2rem 0;
+
+    .footer--contenido{
+        .navegacionF{
+            display: flex;
+            margin-bottom: .5rem;
+            justify-content: space-between;
+            a{
+                color: $blanco;
+            }
+            a:hover{
+                color: $verde;
+            }
+            @include tablet{
+                justify-content: center;
+                a{
+                    margin-right: 5rem;
+                }
+                a:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        p{
+            text-align: center;
+            color: $blanco;
+        }
+    }
+}

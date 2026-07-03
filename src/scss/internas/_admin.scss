@@ -1,0 +1,76 @@
+
+
+.alert{
+    p{
+        text-align: center;
+        color: $blanco;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+    &.error{
+        background-color: rgb(189, 30, 30);
+    }
+    &.exito{
+        background-color: $verde;
+    }
+}
+
+.div--tabla{
+    width: 90%;
+    max-width: 90rem;
+    overflow-x: auto;
+    border: solid black 1px;
+    margin-bottom: 2rem;
+
+    @include tablet{
+        overflow-x: visible;
+    }
+
+    &::-webkit-scrollbar{
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: $gris;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $grisOscuro;
+        border-radius: 4px;
+    }
+}
+
+table.propiedades{
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 60rem;
+
+    th,td{
+        padding: 1rem;
+        text-align: center;
+    }
+    tr{
+        border-bottom: solid black 1px;
+    }
+    th{
+        border-top: black solid 1px;
+    }
+    thead{
+        background-color: $verde;
+    }
+    .contenedor--imagen{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 10rem;
+        }
+    }
+}
+
+.imgActualizar{
+    width: 20rem;
+}
+.eliminar{
+    width: 90%;
+    input{
+        margin: 1.5rem;
+    }
+}
