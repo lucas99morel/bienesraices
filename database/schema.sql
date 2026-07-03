@@ -20,6 +20,15 @@ CREATE TABLE `vendedores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
+-- Datos de ejemplo: vendedores
+-- --------------------------------------------------------
+
+INSERT INTO `vendedores` (`nombre`, `apellido`, `telefono`) VALUES
+('Carlos', 'Gómez', '0981123456'),
+('Laura', 'Benítez', '0982234567'),
+('Diego', 'Fernández', '0983345678');
+
+-- --------------------------------------------------------
 -- Tabla: propiedades
 -- --------------------------------------------------------
 
@@ -41,6 +50,15 @@ CREATE TABLE `propiedades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
+-- Datos de ejemplo: propiedades
+-- --------------------------------------------------------
+
+INSERT INTO `propiedades` (`titulo`, `precio`, `imagen`, `descripcion`, `habitaciones`, `wc`, `estacionamiento`, `creado`, `vendedores_id`) VALUES
+('Casa moderna en zona residencial', 185000.00, 'anuncio4.jpg', 'Amplia casa de dos plantas con jardín y espacio para asador.', 3, 2, 2, '2026-01-15', 1),
+('Departamento céntrico', 95000.00, 'anuncio5.jpg', 'Departamento a estrenar, cerca de centros comerciales y transporte público.', 2, 1, 1, '2026-02-10', 1),
+('Casa quinta con piscina', 240000.00, 'anuncio3.jpg', 'Propiedad amplia ideal para descanso familiar, con piscina y quincho.', 4, 3, 3, '2026-03-05', 2);
+
+-- --------------------------------------------------------
 -- Tabla: usuarios
 -- --------------------------------------------------------
 
@@ -52,5 +70,15 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+-- Datos de ejemplo: usuarios
+-- --------------------------------------------------------
+-- Contraseña de prueba para ambos usuarios: "password"
+-- (hasheada con bcrypt / password_hash() de PHP)
+
+INSERT INTO `usuarios` (`email`, `passw`) VALUES
+('admin@bienesraices.com', '$2y$10$eImiTXuWVxfM37uY4JANjOd9F.f/tqBUOxHKlA79Uc10r9BqlnR6y'),
+('vendedor@bienesraices.com', '$2y$10$eImiTXuWVxfM37uY4JANjOd9F.f/tqBUOxHKlA79Uc10r9BqlnR6y');
 
 SET FOREIGN_KEY_CHECKS = 1;

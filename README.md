@@ -50,10 +50,16 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
 
 5. Creá la base de datos e importá el esquema
 
-   El repo incluye `database/schema.sql` con la estructura completa (`vendedores`, `propiedades`, `usuarios`), en el orden correcto según sus relaciones. Se crea la base automáticamente si no existe:
+   El repo incluye `database/schema.sql` con la estructura completa (`vendedores`, `propiedades`, `usuarios`), en el orden correcto según sus relaciones, más algunos **datos de ejemplo** para poder probar la aplicación sin cargar nada a mano. Se crea la base automáticamente si no existe:
    ```powershell
    Get-Content database/schema.sql | mysql -u root -p
    ```
+
+   **Usuarios de prueba incluidos** (contraseña para ambos: `password`):
+   - `admin@bienesraices.com`
+   - `vendedor@bienesraices.com`
+
+   También se cargan 3 vendedores y 5 propiedades de ejemplo.
 
 6. Compilá los assets (CSS/JS)
    ```powershell
