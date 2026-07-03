@@ -26,8 +26,8 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
 
 1. Cloná el repositorio
    ```powershell
-   git clone https://github.com/lucas99morel/bienesraicesMVC.git
-   cd bienesraicesMVC
+   git clone https://github.com/lucas99morel/bienesraices.git
+   cd bienesraices
    ```
 
 2. Instalá dependencias de PHP
@@ -74,7 +74,7 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
 ## 📁 Estructura del proyecto
 
 ```
-bienesraicesMVC/
+bienesraices/
 ├── controllers/    # Controladores de la aplicación
 ├── database/        # schema.sql (estructura de la BD)
 ├── includes/       # Archivos de configuración e inicialización
