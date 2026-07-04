@@ -78,7 +78,6 @@ CREATE TABLE `usuarios` (
 -- (hasheada con bcrypt / password_hash() de PHP)
 
 INSERT INTO `usuarios` (`email`, `passw`) VALUES
-('admin@bienesraices.com', '$2y$10$eImiTXuWVxfM37uY4JANjOd9F.f/tqBUOxHKlA79Uc10r9BqlnR6y'),
-('vendedor@bienesraices.com', '$2y$10$eImiTXuWVxfM37uY4JANjOd9F.f/tqBUOxHKlA79Uc10r9BqlnR6y');
+('admin@bienesraices.com', '$2y$10$BG4iuCXs.DzFhR7qb0g8Fuu9YWQgFAhCDNA1C97FhpUu203A5/98y');
 
 SET FOREIGN_KEY_CHECKS = 1;

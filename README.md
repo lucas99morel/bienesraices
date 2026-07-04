@@ -52,12 +52,11 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
 
    El repo incluye `database/schema.sql` con la estructura completa (`vendedores`, `propiedades`, `usuarios`), en el orden correcto según sus relaciones, más algunos **datos de ejemplo** para poder probar la aplicación sin cargar nada a mano. Se crea la base automáticamente si no existe:
 ```cmd
-   mysql -u root -p < database\schema.sql
+   mysql -u root -p --default-character-set=utf8mb4 < database\schema.sql
 ```
 
    **Usuarios de prueba incluidos** (contraseña para ambos: `password`):
    - `admin@bienesraices.com`
-   - `vendedor@bienesraices.com`
 
    También se cargan 3 vendedores y 5 propiedades de ejemplo.
 
@@ -68,11 +67,8 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
    > Corre Gulp, que compila SCSS a CSS, procesa/minifica JS y optimiza imágenes.
 
 7. Levantá el servidor PHP
-
-   Parado dentro de la carpeta `public/` (no en la raíz del proyecto):
 ```cmd
-   cd public
-   php -S localhost:3000
+   php -S localhost:3000 -t public
 ```
 
 8. Abrí el navegador en `http://localhost:3000`
