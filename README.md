@@ -20,40 +20,40 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
 - MySQL (o MariaDB)
 - Servidor local (opcional): XAMPP, Laragon, o `php -S`
 
-> **Nota:** los comandos de este README están pensados para **Windows PowerShell**. Si usás CMD o una terminal Unix (Mac/Linux), algunos comandos (como el de importar la base de datos) pueden variar.
+> **Nota:** los comandos de este README están pensados para **Windows CMD**. Si usás PowerShell o una terminal Unix (Mac/Linux), algunos comandos (como el de importar la base de datos o copiar archivos) pueden variar.
 
 ## Instalación
 
 1. Cloná el repositorio
-   ```powershell
+```cmd
    git clone https://github.com/lucas99morel/bienesraices.git
    cd bienesraices
-   ```
+```
 
 2. Instalá dependencias de PHP
-   ```powershell
+```cmd
    composer install
-   ```
+```
 
 3. Instalá dependencias de Node
-   ```powershell
+```cmd
    npm install
-   ```
+```
 
 4. Configurá la conexión a la base de datos
 
    Copiá el archivo de ejemplo includes/config/database.example.php y completá tus propios datos y credenciales:
-   ```powershell
-   Copy-Item includes/config/database.example.php includes/config/database.php
-   ```
+```cmd
+   copy includes\config\database.example.php includes\config\database.php
+```
    Editá `includes/config/database.php` con tu usuario/contraseña de MySQL local.
 
 5. Creá la base de datos e importá el esquema
 
    El repo incluye `database/schema.sql` con la estructura completa (`vendedores`, `propiedades`, `usuarios`), en el orden correcto según sus relaciones, más algunos **datos de ejemplo** para poder probar la aplicación sin cargar nada a mano. Se crea la base automáticamente si no existe:
-   ```powershell
-   Get-Content database/schema.sql | mysql -u root -p
-   ```
+```cmd
+   mysql -u root -p < database\schema.sql
+```
 
    **Usuarios de prueba incluidos** (contraseña para ambos: `password`):
    - `admin@bienesraices.com`
@@ -62,18 +62,18 @@ Aplicación web para la administración de venta, compra y gestión de propiedad
    También se cargan 3 vendedores y 5 propiedades de ejemplo.
 
 6. Compilá los assets (CSS/JS)
-   ```powershell
+```cmd
    npm run dev
-   ```
+```
    > Corre Gulp, que compila SCSS a CSS, procesa/minifica JS y optimiza imágenes.
 
 7. Levantá el servidor PHP
 
    Parado dentro de la carpeta `public/` (no en la raíz del proyecto):
-   ```powershell
+```cmd
    cd public
    php -S localhost:3000
-   ```
+```
 
 8. Abrí el navegador en `http://localhost:3000`
 
